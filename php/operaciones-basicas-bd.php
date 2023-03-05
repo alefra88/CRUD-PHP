@@ -7,21 +7,21 @@ echo "BD seleccionada: <b>mis_contactos</b><br />";
 echo "<h1>Las 4 operaciones b&aacute;sicas a una BD</h1>";
 echo "<h2>1)INSERCI&Oacute;N DE DATOS</h2>";
 // INSERT INTO nombre_tabla (campos_tabla) VALUES (valores_campos)
-$consulta = "INSERT INTO contactos (email,nombre,sexo,nacimiento,telefono,pais,imagen) VALUES ('jon_mircha@bextlan.com','Jonathan MirCha','M','1984-05-23','525555555555','México','jonmircha.png')";
+$consulta = "INSERT INTO contactos (email,nombre,sexo,nacimiento,telefono,pais,imagen) VALUES ('efra.rlz@gmail.com','alefra ochentaicho','M','2004-05-23','525555555555','México','ico.png')";
 
 $ejecutar_consulta = mysql_query($consulta,$conexion);
 echo "Se han insertado los datos =)<br />";
 
 echo "<h2>2)ELIMINACI&Oacute;N DE DATOS</h2>";
 // DELETE FROM nombre_tabla WHERE campo = valor
-$consulta = "DELETE FROM contactos WHERE email = 'jon.mircha@bextlan.com'";
+$consulta = "DELETE FROM contactos WHERE email = 'efra.rlz@gmail.com'";
 
 $ejecutar_consulta = mysql_query($consulta,$conexion);
 echo "Datos eliminados =( <br />";
 
 echo "<h2>3)MODIFICACI&Oacute;N DE DATOS</h2>";
 // UPDATE nombre_tabla SET nombre_campo = valor_campo, otro_campo = otro_valor WHERE campo = valor
-$consulta = "UPDATE contactos SET email = 'cursos@bextlan.com', nombre = 'Bextlan', imagen = 'bextlan.png' WHERE email = 'jon_mircha@bextlan.com'";
+$consulta = "UPDATE contactos SET email = 'hola@hola.com', nombre = 'Bextlan', imagen = 'perfil.jpg' WHERE email = 'efra.rlz@gmail.com'";
 
 $ejecutar_consulta = mysql_query($consulta,$conexion);
 echo "Los Datos han sido modificados =) <br />";
@@ -59,9 +59,9 @@ while($registro=mysql_fetch_array($ejecutar_consulta)){
 	echo "<br />";
 }
 
-$consulta = "SELECT * FROM contactos WHERE nombre = 'Jonathan MirCha' AND imagen = 'jonmircha.png'";
+$consulta = "SELECT * FROM contactos WHERE nombre = 'ejele haymipatita' AND imagen = 'perfil.jpg'";
 $ejecutar_consulta = mysql_query($consulta,$conexion);
-echo "<h3>Consulta que trae los registros de la tabla con el nombre = 'Jonathan MirCha' y imagen = 'jonmircha.png'</h3>";
+echo "<h3>Consulta que trae los registros de la tabla con el nombre = 'Jxd xd' y imagen = 'perfil.jpg'</h3>";
 
 while($registro=mysql_fetch_array($ejecutar_consulta)){
 	echo $registro["email"]."---";
